@@ -1,10 +1,15 @@
+//functions related to database methods
 
-import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-echo "# Instachat" >> README.md 
-git init
-git add README.md 
-
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/Ali-AbdulHadii/Instachat
+//integrates data to database
+class DatabaseMethods {
+  Future addUserDetails(
+      Map<String, dynamic> userInformationMap, String id) async {
+    //uploads the map to firebase, called from sign up
+    return await FirebaseFirestore.instance
+        .collection("users")
+        .doc(id)
+        .set(userInformationMap);
+  }
+}

@@ -1,3 +1,4 @@
+import 'package:chatappdemo1/services/database.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:random_string/random_string.dart';
@@ -20,7 +21,7 @@ class _SignUpState extends State<SignUp> {
   TextEditingController _passwordController = TextEditingController();
   TextEditingController _confirmPasswordController = TextEditingController();
 
-  //regisration function here
+  //registration function here
   registration() async {
     //username and password is checked
     if (userName.isNotEmpty &&
@@ -30,15 +31,17 @@ class _SignUpState extends State<SignUp> {
         //waits for the result before proceeding with the operation
         UserCredential userCredential = await FirebaseAuth.instance
             .createUserWithEmailAndPassword(email: email, password: password);
-        String Id = randomAlphaNumeric(10);
+        String id = randomAlphaNumeric(10);
         //maps the information to integrate it to firebase db
         Map<String, dynamic> userInformationMap = {
           "Username": _usernameController.text,
           "Email": _emailController.text,
           "Password": _passwordController.text,
           "Confirmed Password": _confirmPasswordController.text,
-          "id": Id,
+          "id": id,
         };
+        //databasemthods is called here
+        await DatabaseMethods().addUserDetails(userInformationMap, id);
 
         //display successful message with snackbar
         ScaffoldMessenger.of(context).showSnackBar(
@@ -93,7 +96,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //appbar, color to be changed
+      //appbar, TO DO, color to be changed
       appBar: AppBar(
         title: const Text('Sign Up'),
         backgroundColor: Colors.amber,
