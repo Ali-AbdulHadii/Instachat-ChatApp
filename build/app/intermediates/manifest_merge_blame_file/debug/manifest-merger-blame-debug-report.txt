@@ -13,8 +13,8 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->C:\FlutterApps\chatappdemo1\android\app\src\debug\AndroidManifest.xml:6:5-66
-15-->C:\FlutterApps\chatappdemo1\android\app\src\debug\AndroidManifest.xml:6:22-64
+15-->C:\Users\aliab\OneDrive\Desktop\InstaChatRepo\Instachat-ChatApp\android\app\src\debug\AndroidManifest.xml:6:5-66
+15-->C:\Users\aliab\OneDrive\Desktop\InstaChatRepo\Instachat-ChatApp\android\app\src\debug\AndroidManifest.xml:6:22-64
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 16-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\aliab\.gradle\caches\transforms-3\8f321ae7b2fefec4ba0b738a6fb8396c\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:26:5-79
 16-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\aliab\.gradle\caches\transforms-3\8f321ae7b2fefec4ba0b738a6fb8396c\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:26:22-76
@@ -86,31 +86,31 @@
 66            android:value="2" />
 67
 68        <service
-68-->[:firebase_auth] C:\FlutterApps\chatappdemo1\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+68-->[:firebase_auth] C:\Users\aliab\OneDrive\Desktop\InstaChatRepo\Instachat-ChatApp\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 69            android:name="com.google.firebase.components.ComponentDiscoveryService"
-69-->[:firebase_auth] C:\FlutterApps\chatappdemo1\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
+69-->[:firebase_auth] C:\Users\aliab\OneDrive\Desktop\InstaChatRepo\Instachat-ChatApp\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
 70            android:directBootAware="true"
 70-->[com.google.firebase:firebase-common:20.4.2] C:\Users\aliab\.gradle\caches\transforms-3\29429379be0edfde063e43fae29f4d1b\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:32:13-43
 71            android:exported="false" >
 71-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\aliab\.gradle\caches\transforms-3\8f321ae7b2fefec4ba0b738a6fb8396c\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:68:13-37
 72            <meta-data
-72-->[:firebase_auth] C:\FlutterApps\chatappdemo1\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+72-->[:firebase_auth] C:\Users\aliab\OneDrive\Desktop\InstaChatRepo\Instachat-ChatApp\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 73                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-73-->[:firebase_auth] C:\FlutterApps\chatappdemo1\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+73-->[:firebase_auth] C:\Users\aliab\OneDrive\Desktop\InstaChatRepo\Instachat-ChatApp\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
 74                android:value="com.google.firebase.components.ComponentRegistrar" />
-74-->[:firebase_auth] C:\FlutterApps\chatappdemo1\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+74-->[:firebase_auth] C:\Users\aliab\OneDrive\Desktop\InstaChatRepo\Instachat-ChatApp\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 75            <meta-data
-75-->[:cloud_firestore] C:\FlutterApps\chatappdemo1\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+75-->[:cloud_firestore] C:\Users\aliab\OneDrive\Desktop\InstaChatRepo\Instachat-ChatApp\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 76                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-76-->[:cloud_firestore] C:\FlutterApps\chatappdemo1\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
+76-->[:cloud_firestore] C:\Users\aliab\OneDrive\Desktop\InstaChatRepo\Instachat-ChatApp\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
 77                android:value="com.google.firebase.components.ComponentRegistrar" />
-77-->[:cloud_firestore] C:\FlutterApps\chatappdemo1\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+77-->[:cloud_firestore] C:\Users\aliab\OneDrive\Desktop\InstaChatRepo\Instachat-ChatApp\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 78            <meta-data
-78-->[:firebase_core] C:\FlutterApps\chatappdemo1\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+78-->[:firebase_core] C:\Users\aliab\OneDrive\Desktop\InstaChatRepo\Instachat-ChatApp\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 79                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-79-->[:firebase_core] C:\FlutterApps\chatappdemo1\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+79-->[:firebase_core] C:\Users\aliab\OneDrive\Desktop\InstaChatRepo\Instachat-ChatApp\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
 80                android:value="com.google.firebase.components.ComponentRegistrar" />
-80-->[:firebase_core] C:\FlutterApps\chatappdemo1\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+80-->[:firebase_core] C:\Users\aliab\OneDrive\Desktop\InstaChatRepo\Instachat-ChatApp\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 81            <meta-data
 81-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\aliab\.gradle\caches\transforms-3\8f321ae7b2fefec4ba0b738a6fb8396c\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:69:13-71:85
 82                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
@@ -239,75 +239,75 @@
 146            android:resource="@xml/ga_ad_services_config" />
 146-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\90c33f79c107f308d84d128c328b2351\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:32:13-58
 147
-148        <receiver
-148-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:29:9-33:20
-149            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-149-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:30:13-85
-150            android:enabled="true"
-150-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:31:13-35
-151            android:exported="false" >
-151-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:32:13-37
-152        </receiver>
-153
-154        <service
-154-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:35:9-38:40
-155            android:name="com.google.android.gms.measurement.AppMeasurementService"
-155-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:36:13-84
-156            android:enabled="true"
-156-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:37:13-35
-157            android:exported="false" />
-157-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:38:13-37
-158        <service
-158-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:39:9-43:72
-159            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-159-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:40:13-87
-160            android:enabled="true"
-160-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:41:13-35
-161            android:exported="false"
-161-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:42:13-37
-162            android:permission="android.permission.BIND_JOB_SERVICE" />
-162-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:43:13-69
-163
-164        <uses-library
-164-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\aliab\.gradle\caches\transforms-3\29b2afadb5d762db459808f64547fddf\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:23:9-25:40
-165            android:name="android.ext.adservices"
-165-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\aliab\.gradle\caches\transforms-3\29b2afadb5d762db459808f64547fddf\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:24:13-50
-166            android:required="false" />
-166-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\aliab\.gradle\caches\transforms-3\29b2afadb5d762db459808f64547fddf\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:25:13-37
-167        <uses-library
-167-->[androidx.window:window:1.0.0-beta04] C:\Users\aliab\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
-168            android:name="androidx.window.extensions"
-168-->[androidx.window:window:1.0.0-beta04] C:\Users\aliab\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
-169            android:required="false" />
-169-->[androidx.window:window:1.0.0-beta04] C:\Users\aliab\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
-170        <uses-library
-170-->[androidx.window:window:1.0.0-beta04] C:\Users\aliab\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
-171            android:name="androidx.window.sidecar"
-171-->[androidx.window:window:1.0.0-beta04] C:\Users\aliab\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
-172            android:required="false" />
-172-->[androidx.window:window:1.0.0-beta04] C:\Users\aliab\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
-173
-174        <provider
-174-->[com.google.firebase:firebase-common:20.4.2] C:\Users\aliab\.gradle\caches\transforms-3\29429379be0edfde063e43fae29f4d1b\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
-175            android:name="com.google.firebase.provider.FirebaseInitProvider"
-175-->[com.google.firebase:firebase-common:20.4.2] C:\Users\aliab\.gradle\caches\transforms-3\29429379be0edfde063e43fae29f4d1b\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:24:13-77
-176            android:authorities="com.example.chatappdemo1.firebaseinitprovider"
-176-->[com.google.firebase:firebase-common:20.4.2] C:\Users\aliab\.gradle\caches\transforms-3\29429379be0edfde063e43fae29f4d1b\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:25:13-72
-177            android:directBootAware="true"
-177-->[com.google.firebase:firebase-common:20.4.2] C:\Users\aliab\.gradle\caches\transforms-3\29429379be0edfde063e43fae29f4d1b\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:26:13-43
-178            android:exported="false"
-178-->[com.google.firebase:firebase-common:20.4.2] C:\Users\aliab\.gradle\caches\transforms-3\29429379be0edfde063e43fae29f4d1b\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:27:13-37
-179            android:initOrder="100" />
-179-->[com.google.firebase:firebase-common:20.4.2] C:\Users\aliab\.gradle\caches\transforms-3\29429379be0edfde063e43fae29f4d1b\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:28:13-36
-180
-181        <activity
-181-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\aliab\.gradle\caches\transforms-3\680a2964d8a0bce7cbd43c0f88e0420c\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-182            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-182-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\aliab\.gradle\caches\transforms-3\680a2964d8a0bce7cbd43c0f88e0420c\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-183            android:exported="false"
-183-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\aliab\.gradle\caches\transforms-3\680a2964d8a0bce7cbd43c0f88e0420c\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-184            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-184-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\aliab\.gradle\caches\transforms-3\680a2964d8a0bce7cbd43c0f88e0420c\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+148        <provider
+148-->[com.google.firebase:firebase-common:20.4.2] C:\Users\aliab\.gradle\caches\transforms-3\29429379be0edfde063e43fae29f4d1b\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
+149            android:name="com.google.firebase.provider.FirebaseInitProvider"
+149-->[com.google.firebase:firebase-common:20.4.2] C:\Users\aliab\.gradle\caches\transforms-3\29429379be0edfde063e43fae29f4d1b\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:24:13-77
+150            android:authorities="com.example.chatappdemo1.firebaseinitprovider"
+150-->[com.google.firebase:firebase-common:20.4.2] C:\Users\aliab\.gradle\caches\transforms-3\29429379be0edfde063e43fae29f4d1b\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:25:13-72
+151            android:directBootAware="true"
+151-->[com.google.firebase:firebase-common:20.4.2] C:\Users\aliab\.gradle\caches\transforms-3\29429379be0edfde063e43fae29f4d1b\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:26:13-43
+152            android:exported="false"
+152-->[com.google.firebase:firebase-common:20.4.2] C:\Users\aliab\.gradle\caches\transforms-3\29429379be0edfde063e43fae29f4d1b\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:27:13-37
+153            android:initOrder="100" />
+153-->[com.google.firebase:firebase-common:20.4.2] C:\Users\aliab\.gradle\caches\transforms-3\29429379be0edfde063e43fae29f4d1b\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:28:13-36
+154
+155        <receiver
+155-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:29:9-33:20
+156            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+156-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:30:13-85
+157            android:enabled="true"
+157-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:31:13-35
+158            android:exported="false" >
+158-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:32:13-37
+159        </receiver>
+160
+161        <service
+161-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:35:9-38:40
+162            android:name="com.google.android.gms.measurement.AppMeasurementService"
+162-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:36:13-84
+163            android:enabled="true"
+163-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:37:13-35
+164            android:exported="false" />
+164-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:38:13-37
+165        <service
+165-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:39:9-43:72
+166            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+166-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:40:13-87
+167            android:enabled="true"
+167-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:41:13-35
+168            android:exported="false"
+168-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:42:13-37
+169            android:permission="android.permission.BIND_JOB_SERVICE" />
+169-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\aliab\.gradle\caches\transforms-3\26623983ed14091b1fd7178d8d963521\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:43:13-69
+170
+171        <activity
+171-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\aliab\.gradle\caches\transforms-3\680a2964d8a0bce7cbd43c0f88e0420c\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+172            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+172-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\aliab\.gradle\caches\transforms-3\680a2964d8a0bce7cbd43c0f88e0420c\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+173            android:exported="false"
+173-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\aliab\.gradle\caches\transforms-3\680a2964d8a0bce7cbd43c0f88e0420c\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+174            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+174-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\aliab\.gradle\caches\transforms-3\680a2964d8a0bce7cbd43c0f88e0420c\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+175
+176        <uses-library
+176-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\aliab\.gradle\caches\transforms-3\29b2afadb5d762db459808f64547fddf\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:23:9-25:40
+177            android:name="android.ext.adservices"
+177-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\aliab\.gradle\caches\transforms-3\29b2afadb5d762db459808f64547fddf\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:24:13-50
+178            android:required="false" />
+178-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\aliab\.gradle\caches\transforms-3\29b2afadb5d762db459808f64547fddf\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:25:13-37
+179        <uses-library
+179-->[androidx.window:window:1.0.0-beta04] C:\Users\aliab\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+180            android:name="androidx.window.extensions"
+180-->[androidx.window:window:1.0.0-beta04] C:\Users\aliab\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+181            android:required="false" />
+181-->[androidx.window:window:1.0.0-beta04] C:\Users\aliab\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+182        <uses-library
+182-->[androidx.window:window:1.0.0-beta04] C:\Users\aliab\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+183            android:name="androidx.window.sidecar"
+183-->[androidx.window:window:1.0.0-beta04] C:\Users\aliab\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+184            android:required="false" />
+184-->[androidx.window:window:1.0.0-beta04] C:\Users\aliab\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
 185
 186        <meta-data
 186-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\aliab\.gradle\caches\transforms-3\55b4e390742817dc4b9653e42d791034\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69

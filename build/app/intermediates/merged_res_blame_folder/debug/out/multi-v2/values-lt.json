@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.chatappdemo1.app-mergeDebugResources-5:/values-lt/values-lt.xml",
+            "outputFile": "com.example.chatappdemo1.app-mergeDebugResources-18:/values-lt/values-lt.xml",
             "map": [
                 {
                     "source": "C:\\Users\\aliab\\.gradle\\caches\\transforms-3\\55b4e390742817dc4b9653e42d791034\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-lt\\values.xml",
