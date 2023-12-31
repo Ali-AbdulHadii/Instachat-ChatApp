@@ -1,16 +1,18 @@
+import 'package:chatappdemo1/Pages/homepage.dart';
 import 'package:chatappdemo1/services/database.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:random_string/random_string.dart';
+import 'package:chatappdemo1/services/sharePreference.dart';
 
-class SignUp extends StatefulWidget {
-  const SignUp({super.key});
+class signUp extends StatefulWidget {
+  const signUp({super.key});
 
   @override
-  State<SignUp> createState() => _SignUpState();
+  State<signUp> createState() => _SignUpState();
 }
 
-class _SignUpState extends State<SignUp> {
+class _SignUpState extends State<signUp> {
   //field validiations here
   final _formkey = GlobalKey<FormState>();
 
@@ -24,13 +26,12 @@ class _SignUpState extends State<SignUp> {
   //registration function here
   registration() async {
     //username and password is checked
-    if (userName.isNotEmpty &&
-        password.isNotEmpty &&
-        password == confirmPassword) {
+    if (password != null) {
       try {
         //waits for the result before proceeding with the operation
         UserCredential userCredential = await FirebaseAuth.instance
             .createUserWithEmailAndPassword(email: email, password: password);
+        //generate id for user upon registration
         String id = randomAlphaNumeric(10);
         //maps the information to integrate it to firebase db
         Map<String, dynamic> userInformationMap = {
@@ -38,12 +39,20 @@ class _SignUpState extends State<SignUp> {
           "Email": _emailController.text,
           "Password": _passwordController.text,
           "Confirmed Password": _confirmPasswordController.text,
+          "Photo":
+              "https://dpemoji.com/wp-content/uploads/2023/08/14accf0ae870b126b5cffdc687d805e7.jpg",
           "id": id,
         };
         //databasemthods is called here
         await DatabaseMethods().addUserDetails(userInformationMap, id);
+        //call save info function here
+        await SharedPreference().setUserID(id);
+        await SharedPreference().setUserName(_usernameController.text);
+        await SharedPreference().setUserEmail(_emailController.text);
+        // TO DO implement photo function
 
         //display successful message with snackbar
+        if (!context.mounted) return;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(
@@ -52,6 +61,11 @@ class _SignUpState extends State<SignUp> {
             ),
           ),
         );
+        Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => Home(),
+            ));
       }
       //eexception handling
       on FirebaseAuthException catch (t) {
@@ -198,7 +212,6 @@ class _SignUpState extends State<SignUp> {
                         userName = _usernameController.text;
                         email = _emailController.text;
                         password = _passwordController.text;
-                        confirmPassword = _confirmPasswordController.text;
                       },
                     );
                   }

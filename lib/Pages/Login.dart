@@ -86,7 +86,7 @@ class _LoginPageState extends State<LoginPage> {
               onPressed: () {
                 // Navigate to the Sign Up page when the button is pressed
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => SignUp()));
+                    context, MaterialPageRoute(builder: (context) => signUp()));
               },
               style: ElevatedButton.styleFrom(primary: Colors.amber),
               child: const Text(

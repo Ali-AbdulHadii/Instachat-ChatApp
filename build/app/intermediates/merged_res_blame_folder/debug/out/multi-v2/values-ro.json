@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.chatappdemo1.app-mergeDebugResources-18:/values-ro/values-ro.xml",
+            "outputFile": "com.example.chatappdemo1.app-mergeDebugResources-19:/values-ro/values-ro.xml",
             "map": [
                 {
                     "source": "C:\\Users\\aliab\\.gradle\\caches\\transforms-3\\3b15f093a1d4ccfedac46d94f54273e7\\transformed\\browser-1.4.0\\res\\values-ro\\values-ro.xml",

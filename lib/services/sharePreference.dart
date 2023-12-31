@@ -32,7 +32,8 @@ class SharedPreference {
     return preference.setString(userEmailKey, getUserEmail);
   }
 
-  Future<bool> setDisplayUserName(String getDisplayUserName) async {
+  //name function to used if needed
+  Future<bool> setDisplayName(String getDisplayUserName) async {
     SharedPreferences preference = await SharedPreferences.getInstance();
     return preference.setString(displayUserNameKey, getDisplayUserName);
   }
@@ -58,7 +59,8 @@ class SharedPreference {
     return preference.getString(userEmailKey);
   }
 
-  Future<String?> getDisplayUserName() async {
+  //get function for name if needed
+  Future<String?> getDisplayName() async {
     SharedPreferences preference = await SharedPreferences.getInstance();
     return preference.getString(displayUserNameKey);
   }
