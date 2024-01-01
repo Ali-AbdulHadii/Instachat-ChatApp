@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:chatappdemo1/Pages/addfriend.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -216,6 +217,8 @@ class _HomeState extends State<Home> {
           //adding friends logic here
           //opens a dialog or navigate to another screen for adding friends
           //depending on design
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => addFriend()));
         },
         backgroundColor: Colors.deepPurpleAccent,
         child: Icon(Icons.person_add),

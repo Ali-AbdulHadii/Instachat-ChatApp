@@ -13,6 +13,16 @@ class DatabaseMethods {
         .set(userInformationMap);
   }
 
+  //send a friend request
+  Future<void> sendFriendRequest(String senderId, String recipientId) async {
+    await FirebaseFirestore.instance.collection("friendRequests").add({
+      'senderId': senderId,
+      'recipientId': recipientId,
+      'status': 'pending', // more statuses needed
+      'timestamp': FieldValue.serverTimestamp(),
+    });
+  }
+
   //fetch user data from Firestore database
   Future<QuerySnapshot> getUserbyEmail(String email) async {
     return await FirebaseFirestore.instance
