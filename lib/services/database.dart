@@ -12,4 +12,12 @@ class DatabaseMethods {
         .doc(id)
         .set(userInformationMap);
   }
+
+  //fetch user data from Firestore database
+  Future<QuerySnapshot> getUserbyEmail(String email) async {
+    return await FirebaseFirestore.instance
+        .collection("users")
+        .where("Email", isEqualTo: email)
+        .get();
+  }
 }
