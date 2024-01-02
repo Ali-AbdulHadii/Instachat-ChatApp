@@ -1,3 +1,5 @@
+import 'package:chatappdemo1/services/database.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:chatappdemo1/Pages/addfriend.dart';
 
@@ -9,6 +11,39 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  //search icon boolean, when clicked it will be set to true
+  bool search = false;
+
+  var querySearchResult = [];
+  var temporarySearchResult = [];
+
+  initialSearch(value) {
+    if (value.length == 0) {
+      setState(() {
+        querySearchResult = [];
+        temporarySearchResult = [];
+      });
+    } else {
+      setState(() {
+        search = true;
+      });
+      if (querySearchResult.isEmpty && value.length == 1) {
+        DatabaseMethods().Search(value).then((QuerySnapshot docs) {
+          for (int i = 0; i < docs.docs.length; ++i) {
+            querySearchResult.add(docs.docs[1].data());
+          }
+        });
+      } else {
+        temporarySearchResult = [];
+        querySearchResult.forEach((element) {
+          if (element['Username']) {
+            temporarySearchResult.add(element);
+          }
+        });
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,23 +71,45 @@ class _HomeState extends State<Home> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   //App name here
-                  Text(
-                    'Instachat',
-                    style: TextStyle(
-                        fontFamily: 'FuturaLight',
-                        fontSize: 26,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Container(
-                    //The Search Icon here
-                    //margin: EdgeInsets.only(top: 20),
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        color: Colors.purpleAccent,
-                        borderRadius: BorderRadius.all(Radius.circular(50))),
-                    child: Icon(
-                      Icons.search,
-                      color: Colors.black,
+                  search
+                      ? Expanded(
+                          child: TextField(
+                          onChanged: (value) {
+                            initialSearch(value);
+                          },
+                          decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: 'Search Username',
+                              hintStyle: TextStyle(
+                                  fontFamily: "Montserrat-R",
+                                  fontSize: 18,
+                                  color: Colors.black38)),
+                          style: TextStyle(
+                              fontFamily: "Montserrat-R", fontSize: 18),
+                        ))
+                      : Text(
+                          'Instachat',
+                          style: TextStyle(
+                              fontFamily: 'FuturaLight',
+                              fontSize: 26,
+                              fontWeight: FontWeight.bold),
+                        ),
+                  GestureDetector(
+                    onTap: () {
+                      search = true;
+                      setState(() {});
+                    },
+                    child: Container(
+                      //The Search Icon here
+                      //margin: EdgeInsets.only(top: 20),
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                          color: Colors.purpleAccent,
+                          borderRadius: BorderRadius.all(Radius.circular(50))),
+                      child: Icon(
+                        Icons.search,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                 ],
@@ -65,7 +122,9 @@ class _HomeState extends State<Home> {
               margin: EdgeInsets.only(top: 15),
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 1.15,
+              height: search
+                  ? MediaQuery.of(context).size.height / 2
+                  : MediaQuery.of(context).size.height / 1.15,
               //this makes the chat section rounded
               //redesigned later
               decoration: BoxDecoration(
