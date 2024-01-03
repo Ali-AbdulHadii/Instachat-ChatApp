@@ -10,6 +10,7 @@ class SharedPreference {
   static String userPhotoKey = "userPhotoKey";
   static String userEmailKey = "userEmailKey";
   static String displayUserNameKey = "displayUserName";
+  static String friendsListKey = "friendsListKey";
 
   //set functions to save the info
   Future<bool> setUserID(String getUserId) async {
@@ -63,5 +64,26 @@ class SharedPreference {
   Future<String?> getDisplayName() async {
     SharedPreferences preference = await SharedPreferences.getInstance();
     return preference.getString(displayUserNameKey);
+  }
+
+  //fuinction to save friends locally
+  Future<bool> setFriendsList(List<String> friends) async {
+    SharedPreferences preference = await SharedPreferences.getInstance();
+    return preference.setStringList(friendsListKey, friends.toList());
+  }
+
+  //get function to get friends list
+  Future<Set<String>> getFriendsList() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    List<String>? friendsList = preferences.getStringList(friendsListKey);
+    Set<String> convertedFriendsList;
+
+    if (friendsList != null) {
+      convertedFriendsList = friendsList.toSet();
+    } else {
+      convertedFriendsList = {};
+    }
+
+    return convertedFriendsList;
   }
 }

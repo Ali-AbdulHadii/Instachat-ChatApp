@@ -7,6 +7,74 @@ import 'package:firebase_core/firebase_core.dart';
 
 //integrates data to database
 class DatabaseMethods {
+  //function to check if a friend request has been already sent
+  Future<bool> checkFriendRequestExist(
+      String senderId, String recipientId) async {
+    QuerySnapshot<Map<String, dynamic>> querySnapshot = await FirebaseFirestore
+        .instance
+        .collection("friendRequests")
+        .where("senderId", isEqualTo: senderId)
+        .where("recipientId", isEqualTo: recipientId)
+        .get();
+    return querySnapshot.docs.isNotEmpty;
+  }
+
+  //function to accept a friend request
+  Future<void> acceptFriendRequest(String senderId, String recipientId) async {
+    try {
+      //update recipient's friend list
+      DocumentReference recipientDoc =
+          FirebaseFirestore.instance.collection("users").doc(recipientId);
+      await recipientDoc.update({
+        'friends': FieldValue.arrayUnion([senderId])
+      });
+      //update sender's friend list
+      DocumentReference senderDoc =
+          FirebaseFirestore.instance.collection("users").doc(senderId);
+      await senderDoc.update({
+        'friends': FieldValue.arrayUnion([recipientId])
+      });
+
+      await FirebaseFirestore.instance
+          .collection("friendRequests")
+          .where("senderId", isEqualTo: senderId)
+          .where("recipientId", isEqualTo: recipientId)
+          .get()
+          .then((querySnapshot) {
+        querySnapshot.docs.forEach((doc) {
+          doc.reference.update({'status': 'accepted'});
+        });
+      });
+    } catch (e) {
+      print("error accepting friend request: $e");
+      //exception handling
+    }
+  }
+
+  //function to reject a friend request
+  Future<void> rejectFriendRequest(String senderId, String recipientId) async {
+    try {
+      //delete the friend request from the collection
+      await FirebaseFirestore.instance
+          .collection("friendRequests")
+          .where("senderId", isEqualTo: senderId)
+          .where("recipientId", isEqualTo: recipientId)
+          .get()
+          .then((querySnapshot) {
+        querySnapshot.docs.forEach((doc) {
+          doc.reference.update({'status': 'rejected'});
+          //doc.reference.delete();
+        });
+      });
+      //TO-DO, update the status in case we want to keep a record
+      //of rejected friend requests in a separate collection.
+      //we add a 'status' field and set it to 'rejected'.
+    } catch (e) {
+      print("error rejecting friend request: $e");
+      // You might want to throw an exception or handle the error in a way that suits your application
+    }
+  }
+
   //function to get friend requests based on userId
   Future<List<String>> getFriendRequests() async {
     String userId = await SharedPreference().getUserID() as String;
@@ -39,6 +107,8 @@ class DatabaseMethods {
   //maping user details to firebase
   Future addUserDetails(
       Map<String, dynamic> userInformationMap, String id) async {
+    // Add 'friends' field to the user details map
+    userInformationMap['friends'] = [];
     //uploads the map to firebase, called from sign up
     return await FirebaseFirestore.instance
         .collection("users")

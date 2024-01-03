@@ -27,8 +27,8 @@ class _ForgotPassState extends State<ForgotPass> {
           style: TextStyle(fontFamily: "Montserrat-R", fontSize: 20),
         )),
       );
-    } on FirebaseAuthException catch (t) {
-      if (t.code == "user-not-found") {
+    } on FirebaseAuthException catch (e) {
+      if (e.code == "user-not-found") {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
               content: Text(

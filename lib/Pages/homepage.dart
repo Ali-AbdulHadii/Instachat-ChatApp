@@ -1,4 +1,5 @@
 import 'package:chatappdemo1/services/database.dart';
+import 'package:chatappdemo1/services/sharePreference.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:chatappdemo1/Pages/addfriend.dart';
@@ -11,39 +12,30 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  //search icon boolean, when clicked it will be set to true
   bool search = false;
-
-  var querySearchResult = [];
-  var temporarySearchResult = [];
-
-  initialSearch(value) {
-    if (value.length == 0) {
-      setState(() {
-        querySearchResult = [];
-        temporarySearchResult = [];
-      });
-    } else {
-      setState(() {
-        search = true;
-      });
-      if (querySearchResult.isEmpty && value.length == 1) {
-        DatabaseMethods().Search(value).then((QuerySnapshot docs) {
-          for (int i = 0; i < docs.docs.length; ++i) {
-            querySearchResult.add(docs.docs[1].data());
-          }
-        });
-      } else {
-        temporarySearchResult = [];
-        querySearchResult.forEach((element) {
-          if (element['Username']) {
-            temporarySearchResult.add(element);
-          }
-        });
-      }
-    }
+  String? userName, profilePhoto, email;
+  //onload function
+  onLoad() async {
+    await getSharedPref();
+    setState(() {});
   }
 
+  getSharedPref() async {
+    userName = await SharedPreference().getUserName();
+    profilePhoto = await SharedPreference().getUserPhoto();
+    email = await SharedPreference().getUserEmail();
+    //setstate
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    onLoad();
+  }
+
+  //create chatid between added friends
+  getChatIdByUsername(String x, String y) {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,7 +67,7 @@ class _HomeState extends State<Home> {
                       ? Expanded(
                           child: TextField(
                           onChanged: (value) {
-                            initialSearch(value);
+                            //initialSearch(value);
                           },
                           decoration: InputDecoration(
                               border: InputBorder.none,
@@ -96,7 +88,7 @@ class _HomeState extends State<Home> {
                         ),
                   GestureDetector(
                     onTap: () {
-                      search = true;
+                      //search = true;
                       setState(() {});
                     },
                     child: Container(

@@ -68,8 +68,8 @@ class _SignUpState extends State<signUp> {
             ));
       }
       //eexception handling
-      on FirebaseAuthException catch (t) {
-        if (t.code == 'weak-password') {
+      on FirebaseAuthException catch (e) {
+        if (e.code == 'weak-password') {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(
@@ -78,7 +78,7 @@ class _SignUpState extends State<signUp> {
               ),
             ),
           );
-        } else if (t.code == 'username-already-exist') {
+        } else if (e.code == 'username-already-exist') {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(
@@ -87,7 +87,7 @@ class _SignUpState extends State<signUp> {
               ),
             ),
           );
-        } else if (t.code == 'email-already-exist') {
+        } else if (e.code == 'email-already-exist') {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(
@@ -98,11 +98,11 @@ class _SignUpState extends State<signUp> {
           );
         } else {
           //Firebase Authentication errors here
-          print("Error: ${t.message}");
+          print("Error: ${e.message}");
         }
-      } catch (t) {
+      } catch (e) {
         //non-Firebase related errors
-        print("Error: $t");
+        print("Error: $e");
       }
     }
   }
